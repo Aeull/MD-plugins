@@ -1,6 +1,6 @@
 let fs = require('fs')
 
-global.owner = ['994407430641', '6283844009539'] // Put your number here
+global.owner = ['6285822347348', '6285822347348'] // Put your number here
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -25,10 +25,10 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = '𝐙-𝐁𝐨𝐭𝐳 あ\n\n\n'
+global.packname = 'ArullBotz\n\n\n'
 global.author = '\n۰ ⸼'
 
-global.wm = '𝐙-𝐁𝐨𝐭𝐳'
+global.wm = 'ArullBotz'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.fra = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=booking-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&&fontname=barlow+black+italic&fillTextColor=%23f2aa4c&fillOutlineColor=%23f5c17c&fillOutline2Color=%23f5c17c&useInsetHighlight=false&insetHighlightColor=%23f5c17c&insetHighlightOffset=3&shadowType=0&shadowColor=%2315202b&shadowOpacity=0&backgroundColor=%23101920&text='
 
