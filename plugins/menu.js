@@ -169,22 +169,22 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            hydratedFooterText: `Hitung Mundur Lebaran:\n${lebaran}\n\n${wm}`,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'Github',
-               url: `https://github.com/WhatsAppCode-Official`
+               displayText: 'My YouTube',
+               url: `https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg`
              }
 
            },
              {
              urlButton: {
                displayText: 'Group Whatsapp',
-               url: `https://chat.whatsapp.com/LG1e7OFZMg1JfQmJsM8use`
+               url: `https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe`
              }
              
            },
              {
              urlButton: {
                displayText: `Source Code`,
-               url: 'https://wibusoft.com'
+               url: 'https://youtu.be/NmP2bAEOI9g'
              }
 
            },
