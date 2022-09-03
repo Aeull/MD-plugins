@@ -12,8 +12,8 @@ let handler = async (m, { conn, text, isOwner }) => {
 }
 handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['premium']
-
 handler.command = /^join$/i
+handler.owner = true
 
 module.exports = handler
 
