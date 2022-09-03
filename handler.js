@@ -247,28 +247,28 @@ module.exports = {
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
                 if (chat) {
                     if (!('isBanned' in chat)) chat.isBanned = false
-                    if (!('welcome' in chat)) chat.welcome = false
+                    if (!('welcome' in chat)) chat.welcome = true
                     if (!('sWelcome' in chat)) chat.sWelcome = ''
                     if (!('sBye' in chat)) chat.sBye = ''
                     if (!('sPromote' in chat)) chat.sPromote = ''
                     if (!('sDemote' in chat)) chat.sDemote = ''
                     if (!('delete' in chat)) chat.delete = false
                     if (!('expired' in chat)) chat.expired = 0
-                    if (!('antiLink' in chat)) chat.antiLink = false
+                    if (!('antiLink' in chat)) chat.antiLink = true
                     if (!('viewonce' in chat)) chat.viewonce = false
                     if (!('simi' in chat)) chat.simi = false
                     if (!('stiker' in chat)) chat.stiker = false
                     if (!('antiToxic' in chat)) chat.antiToxic = false
                 } else global.db.data.chats[m.chat] = {
                     isBanned: false,
-                    welcome: false,
+                    welcome: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: false,
                     expired: 0,
-                    antiLink: false,
+                    antiLink: true,
                     viewonce: false,
                     simi: false,
                     stiker: false,
@@ -580,14 +580,14 @@ module.exports = {
                                 (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                             let mim = this.random(['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/pdf', 'text/rtf'])
                             //let mim = _mim[Math.floor(Math.random() * _mim.length)]
-                            this.sendBD(id, textt, global.wm, pp, [[`Menu`, `.menu`], [action === 'add' ? 'Welcome 🙏' : 'Goodbye 👋', 'iyjf']], {                      
+                            this.sendBD(id, textt, global.wm, pp, [[`Menu`, `.menu`], [action === 'add' ? 'Welcome 🙏' : 'Sayonara 👋', 'iyjf']], {                      
                               key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' }, message: { contactMessage: { displayName: `${await this.getName(user)}`, vcard: `BEGIN: VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${user}\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}},
                               { 
                                jpegThumbnail: await (await fetch("https://telegra.ph/file/27e90a619b30082694bde.jpg")).buffer(), fileName: action === 'add' ? `Welcome ${this.getName(user)} 🥰` : `Goodbye ${this.getName(user)} ☺`, mimetype: mim, fileLength: 9999999999999, pageCount: 9999999999999,
                                mentions: [user],
                                contextInfo: {
                                externalAdReply :{
-                                  mediaUrl: 'https://www.instagram.com/p/CH1A1c9J5pY/?utm_medium=copy_link',
+                                  mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
                                   mediaType: 2,
                                   description: '', 
                                   title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
