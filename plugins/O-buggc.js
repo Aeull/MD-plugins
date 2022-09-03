@@ -36,7 +36,7 @@ await conn.reply(m.chat, `ꪶFelicia⿻ꫂ`, main)
 handler.help = ['buggc']
 handler.tags = ['bugbotv2']
 handler.command = /^buggc$/
-
+handler.group = true
 handler.owner = true
 
 module.exports = handler
