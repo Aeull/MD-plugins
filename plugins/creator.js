@@ -5,7 +5,7 @@ let a = [{
     vcard: 'BEGIN:VCARD\n'
     + 'VERSION:3.0\n'
     + 'N:;Ownerbot;;;FN:~ ʙᴏᴛᴢ ~\n'
-    + 'ORG:Developer\n'
+    + 'ORG:Pemilik Bot\n'
     + 'TEL;Creator👑;waid=6285822347348:6285822347348\n'
     //+ 'item1.TEL;Support Whatsapp;waid=15517868060:15517868060\n'
     + `item1.X-ABLabel:👑 Creator ${global.wm} \n`
@@ -29,7 +29,7 @@ let a = [{
 
    + 'FN:~ orang ~\n' // full name
 
-   + 'ORG:Pengembang\nTEL;Bot ♨️;waid=6283843192208:6283843192208\n'
+   + 'ORG:Bot\nTEL;Bot ♨️;waid=6283843192208:6283843192208\n'
 
    //+ 'item1.TEL;Support Whatsapp;waid=6281299878753:6281299878753\n' // WhatsApp ID + phone number
 
