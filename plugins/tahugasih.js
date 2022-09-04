@@ -45,4 +45,9 @@ global.tahugasih= [
 "Tahukah Anda bahwa sel darah merah diproduksi di sumsum tulang?",
 "Tahukah Anda bahwa 11% orang kidal",
 "Tahukah kamu setiap tahun matahari kehilangan 360 juta ton",
+"Tahukah kamu kalo Arull itu adalah laki laki",
+"Tahukah kamu kalo Arull itu Bukan Superman",
+"Tahukah Anda bahwa Anda bukanlah pacar saya",
+"Tahukah Anda bahwa Arull itu orangnya kul",
+"Tahukah Anda bahwa Arull itu orangnya Ganteng",
 ]
