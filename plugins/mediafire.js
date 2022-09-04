@@ -1,34 +1,26 @@
-let util = require('util')
+let axios = require('axios');
 
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-    if (!text) throw `uhm.. urlnya mana?\n\npenggunaan:\n${usedPrefix + command} url\ncontoh:\n${usedPrefix + command} http://www.mediafire.com/file/js0gr2nozcmk9yg/example.txt/file`
-    await m.reply('_Wait a minute, Request in progress...._')
-    let anu = await mediafireDownloader(text)
-                if (anu.filesize.split("MB")[0] >= 400.00) return m.reply('File Melebihi Batas '+util.format(anu))
-                //else if (Number(anu.filesize.includes("GB"))) return m.reply('File Melebihi Batas '+util.format(result))
-		        await conn.reply(m.chat, util.format(anu), m)
-                conn.sendFile(m.chat, anu.link, anu.title, '', m)
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+	if (!text) throw `uhm.. urlnya mana?\n\npenggunaan:\n${usedPrefix + command} url\ncontoh:\n${usedPrefix + command} http://www.mediafire.com/file/js0gr2nozcmk9yg/example.txt/file`
+	
+	let res = await (await axios.get(API('males', '/mediafire', { url: text }))).data;
+	if (res.status != 200) throw res.message;
+	let txt = `
+*Nama File:* ${res.result.filename}
+*Ukuran:* ${res.result.filesize}
+*Tipe File:* ${res.result.filetype}
+*Di Upload:* ${res.result.uploadAt}
+*Link:* ${res.result.link}
+
+
+_harap bersabar, file sedang dikirim :'v_
+`.trim()
+conn.sendButton(m.chat, txt, wm, 'menu', usedPrefix + 'menu', m)
+conn.sendMessage(m.chat, { document: { url: res.result.link }, mimetype: res.result.mimetype, fileName: res.result.filename }, { quoted: m })
 }
+
 handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(mediafire|mf)$/i
-
-handler.limit = 1
+handler.command = /^((media|md)?fire)$/i
 
 module.exports = handler
-
-let axios = require('axios')
-let cheerio = require('cheerio')
-function mediafireDownloader(url) {
-    return new Promise(async (resolve, reject) => {
-        axios.get(url).then(({ data }) => {
-            const $ = cheerio.load(data)
-            link = $('a#downloadButton').attr('href')
-            filesize = $('a#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '')
-            seplit = link.split('/')
-            title = seplit[5]
-            mime = title.split('.')[1]
-            resolve({ title, filesize, mime, link })
-        })
-    })
-}
