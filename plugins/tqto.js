@@ -12,8 +12,7 @@ let handler = async (m) => {
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
     else who = m.sender
     let user = global.db.data.users[who]
-let tqto = `
-*BIG THANKS TO*
+let tqto = `*BIG THANKS TO*
 
 Nurutomo: 
 https://github.com/Nurutomo
@@ -25,6 +24,7 @@ Ilman:
 https://github.com/ilmanhdyt
 Adulhy: 
 https://github.com/adulhy
+
 `
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
