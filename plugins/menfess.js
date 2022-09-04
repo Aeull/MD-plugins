@@ -33,7 +33,6 @@ Contoh Penggunaan: .chat nomor|pesan untuknya
 
 Contoh: #chat 628xxxxxxxxxx|hai owner`
 
-    conn.send2ButtonLoc(chat + '@s.whatsapp.net', await conn.resize(fla+ 'Pesan Rahasia', 300, 300), chat1, haori, 'Menu', '.menu', 'Donasi', '.donasi', m)
     
     let logs = `BOT AKAN BLOKIR KONTAKMU?
     
