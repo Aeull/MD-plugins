@@ -48,8 +48,6 @@ Contoh: #chat 628xxxxxxxxxx|hai owner`
 Isi Pesan : ${pesan}
 
 ⬡──⬡─────────⬡──⬡`
-    conn.send2ButtonLoc(m.chat, await conn.resize('https://telegra.ph/file/6b2ec099a35ff3d36521a.jpg' , 260, 150), logs, haori1, 'Owner', 'owner', 'Donasi', '.donasi', m)
-}
 handler.help = ['chat <nomor|pesan>']
 handler.tags = ['menfess']
 handler.command = /^(chat|menfess)$/i
