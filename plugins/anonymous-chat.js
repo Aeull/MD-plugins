@@ -13,7 +13,7 @@ let [number, pesan] = text.split `|`
 
     let chat = `${number}`
     var nomor = m.sender
-    let chat1 = `Hi Saya Bot Ada Yang Kirim Pesan Ke Kamu
+    let chat1 = `Hi Saya ArullBotz Ada Yang Kirim Pesan Ke Kamu
 Seseorang Temanmu
 (Pengirim Rahasia)
 
