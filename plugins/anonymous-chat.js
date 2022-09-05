@@ -1,4 +1,4 @@
-// Fitur By Zivsan And Haori Kasih Credits Dong Stah
+// Fitur By Arull Kasih Credits Dong Stah
 const { MessageType } = require('@adiwajshing/baileys')
 let fetch = require('node-fetch')
 let handler = async(m, { conn, text }) => {
@@ -58,7 +58,7 @@ handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
-handler.private = false
+handler.private = true
 
 handler.admin = false
 handler.botAdmin = false
