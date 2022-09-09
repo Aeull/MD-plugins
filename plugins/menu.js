@@ -155,7 +155,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     let gb = global.loli[Math.floor(Math.random() * 352)]
-    conn.menu[gjk] = await conn.send2ButtonImg(m.chat, gb, text.trim(), global.wm, 'Rules', '.rules', 'Owner', '.owner', m, { mentions: [m.sender] })
+    conn.menu[gjk] = await conn.send2ButtonImg(m.chat, gb, text.trim(), global.wm, 'Rules', '.rules', 'Owner', '.owner', fake, { mentions: [m.sender] })
     conn.sendMessage(m.chat, { react: { text: '👑', key: conn.menu[gjk].key, }})
     setTimeout(() => {
                   delete conn.menu[gjk]
@@ -196,15 +196,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            }]
          }
        }
-     }), { userJid: m.sender, quoted: m });
-    //conn.reply(m.chat, text.trim(), m)
+     }), { userJid: m.sender, quoted: fake });
+    //conn.reply(m.chat, text.trim(), fake)
     return await conn.relayMessage(
          m.chat,
          template.message,
          { messageId: template.key.id }
      )*/
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, 'Maaf, menu sedang error', fake)
     throw e
   }
 }
