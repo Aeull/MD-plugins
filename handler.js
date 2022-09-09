@@ -587,6 +587,7 @@ module.exports = {
                                mentions: [user],
                                contextInfo: {
                                externalAdReply :{
+                                  showAdAttribution: true,
                                   mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
                                   mediaType: 2,
                                   description: '', 
