@@ -196,15 +196,15 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
            }]
          }
        }
-     }), { userJid: m.sender, quoted: fake });
-    //conn.reply(m.chat, text.trim(), fake)
+     }), { userJid: m.sender, quoted: m });
+    //conn.reply(m.chat, text.trim(), m)
     return await conn.relayMessage(
          m.chat,
          template.message,
          { messageId: template.key.id }
      )*/
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', fake)
+    conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
